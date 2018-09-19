@@ -3,6 +3,8 @@
 
 #Printing out 2-20 even
 
+# JA: These should be changes to the evens.py file
+
 def main():
     for i in range(2,22,2):
         print(i)
