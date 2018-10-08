@@ -2,7 +2,7 @@
 #Program that allows the user to guess the name of an animal.
 
 import random
-animal = {'lion','tiger','bear' ,'owl','frog','toucan','monkey', 'shark', 'zebra', 'wolverine', 'dog', 'cat', 'gorilla', 'fish', 'fox', 'groundhog',}
+animal = {'Lion','Tiger','Bear' ,'Owl','Frog','Toucan','Monkey', 'Shark', 'Zebra', 'Wolverine', 'Dog', 'Cat', 'Gorilla', 'Fish', 'Fox', 'Groundhog', 'Cow', 'cow', 'lion','tiger','bear' ,'owl','frog','toucan','monkey', 'shark', 'zebra', 'wolverine', 'dog', 'cat', 'gorilla', 'fish', 'fox', 'groundhog',}
 
 randomanimal = random.choice(dict(enumerate(animal)))
 guess = ""
@@ -12,7 +12,18 @@ while guess != randomanimal:
 
     if guess != "":
         print ("Your guess is wrong, try again.")
+    elif guess == 'quit':
+        print ("You have quit the game, thanks for playing!")
+        break   
 
     guess = input('What animal is the program thinking of?')
 
 print ("Congratulations, you win!")
+liking = input ("Do you like this animal?")
+
+if liking  == 'yes':
+        print ("They are cool animals!")
+elif liking == 'no':
+        print ("There are more animals to like.")
+
+
