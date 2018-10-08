@@ -30,6 +30,8 @@ class Calc():
 
     #Finding the outcome of the sequence and creating the textbox in the calculator
     def calc_total(self):
+        # JA: This was not what you had to do for the project
+        # The idea was to create the logic to resolve the equations
         self.eq = True
         self.current = float(self.current)
         if self.op_pending == True:
