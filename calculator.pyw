@@ -5,8 +5,10 @@
 #calculator.py
 #This program reprsents the graphical interface of the calculator along with the functions to calculate arithmetic sequences.
 
-from tkinter import *
+#JA: What happened with #5?
+#JA: Review the calculation logic
 
+from tkinter import *
 
 class Calc():
     def __init__(self):
@@ -101,8 +103,6 @@ gui.configure(bg='red')
 text_box = Entry(calc, justify=RIGHT)
 text_box.grid(row = 0, column = 0, columnspan = 3, pady = 3)
 text_box.insert(0, "0")
-
-
 
 numbers = "123456789"
 i = 0
