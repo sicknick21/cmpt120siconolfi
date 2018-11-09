@@ -5,10 +5,8 @@
 #calculator.py
 #This program reprsents the graphical interface of the calculator along with the functions to calculate arithmetic sequences.
 
-#JA: What happened with #5?
-#JA: Review the calculation logic
-
 from tkinter import *
+
 
 class Calc():
     def __init__(self):
@@ -101,8 +99,10 @@ calc.grid()
 gui.title("Calculator Project")
 gui.configure(bg='red')
 text_box = Entry(calc, justify=RIGHT)
-text_box.grid(row = 0, column = 0, columnspan = 3, pady = 3)
+text_box.grid(row = 0, column = 0, columnspan = 3, pady = 5)
 text_box.insert(0, "0")
+
+
 
 numbers = "123456789"
 i = 0
@@ -117,43 +117,59 @@ for p in range(1,4):
 
 bttn_0 = Button(calc, text = "0", fg='white', bg = 'light blue', font = 'bold'  )
 bttn_0["command"] = lambda: sum1.num_press(0)
-bttn_0.grid(row = 2, column = 1, pady = 3)
+bttn_0.grid(row = 4, column = 1, pady = 5)
+
 
 #The operation buttons have a different color on them such as a orange background and green font.
 #Button for the division sign
 bttn_div = Button(calc, text = "/", fg='green', bg = 'orange' )
 bttn_div["command"] = lambda: sum1.operation("divide")
-bttn_div.grid(row = 4, column = 3, pady = 3)
+bttn_div.grid(row = 4, column = 3, pady = 5)
 
 #Button for the multiplication sign
 bttn_mult = Button(calc, text = "*" ,fg='green', bg = 'orange')
 bttn_mult["command"] = lambda: sum1.operation("multiply")
-bttn_mult.grid(row = 3, column = 3, pady = 3)
+bttn_mult.grid(row = 3, column = 3, pady = 5)
 
 #Button for the subtraction sign
 minus = Button(calc, text = "-",fg='green', bg = 'orange' )
 minus["command"] = lambda: sum1.operation("subtract")
-minus.grid(row = 2, column = 3, pady = 3)
+minus.grid(row = 2, column = 3, pady = 5)
 
 #Button to add in a decimal 
-point = Button(calc, text = ".", fg='green', bg = 'orange' )
+point = Button(calc, text = ".", fg='black', bg = 'lightblue' )
 point["command"] = lambda: sum1.num_press(".")
-point.grid(row = 4, column = 0, pady = 3)
+point.grid(row = 4, column = 0, pady = 5)
 
 #Button for the addition sign
 add = Button(calc, text = "+", fg='green', bg = 'orange' )
 add["command"] = lambda: sum1.operation("add")
-add.grid(row = 1, column = 3, pady = 3)
+add.grid(row = 1, column = 3, pady = 5)
 
-#Button to delete your input and answer
-clear = Button(calc, text = "Delete", fg='green', bg = 'orange' )
+#Button to add the last result from memory
+clear = Button(calc, text = "M+", fg='green', bg = 'orange' )
 clear["command"] = sum1.cancel
-clear.grid(row = 5, column = 1, pady = 3)
+clear.grid(row = 5, column = 2, pady = 1)
+
+#Button to recall the value from memory
+clear = Button(calc, text = "MR", fg='green', bg = 'orange' )
+clear["command"] = sum1.cancel
+clear.grid(row = 5, column = 0, pady = 5)
+
+#Button to subtract the last result from memory
+clear = Button(calc, text = "M-", fg='green', bg = 'orange' )
+clear["command"] = sum1.cancel
+clear.grid(row = 4, column = 2, pady = 1)
+
+#Button to clear the memory
+clear = Button(calc, text = "MC", fg='green', bg = 'orange' )
+clear["command"] = sum1.all_cancel
+clear.grid(row = 5, column = 1, pady = 5)
 
 #Button for the equal sign and to display the answer
 equals = Button(calc, text = "=", fg='green', bg = 'orange' )
 equals["command"] = sum1.calc_total
-equals.grid(row = 5, column = 3, pady = 3)
+equals.grid(row = 5, column = 3, pady = 5)
 
 
 gui.mainloop()
