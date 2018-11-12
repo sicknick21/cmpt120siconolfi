@@ -4,7 +4,7 @@
 # Created: 2018-10-19
 #calculator.py
 #This program reprsents the graphical interface of the calculator along with the functions to calculate arithmetic sequences.
-
+# JA: Memory functions are not working
 from tkinter import *
 
 
