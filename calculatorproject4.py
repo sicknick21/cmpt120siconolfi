@@ -2,7 +2,7 @@
 # Project 4
 # Author: Nicholas Siconolfi
 # Created: 2018-11-28
-# calculatorclasses.py
+# calculatorproject4.py
 # This program reprsents the graphical interface of the calculator along with the functions to calculate arithmetic sequences.
 
 from graphics import *
